@@ -1,6 +1,6 @@
 {
   "name": "svg-path-to-polygons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Converts path commands for an SVG path to polygonal points.",
   "main": "svg-path-to-polygons.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Phrogz/svg-path-to-polygons.git"
+    "url": "git+https://github.com/BuildingRobotics/svg-path-to-polygons.git"
   },
   "keywords": [
     "svg",
@@ -20,9 +20,9 @@
   "author": "Gavin Kistner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Phrogz/svg-path-to-polygons/issues"
+    "url": "https://github.com/BuildingRobotics/svg-path-to-polygons/issues"
   },
-  "homepage": "https://github.com/Phrogz/svg-path-to-polygons#readme",
+  "homepage": "https://github.com/BuildingRobotics/svg-path-to-polygons#readme",
   "dependencies": {
     "svg-path-parser": "^1.1.0"
   },
