@@ -105,6 +105,11 @@ SvgPathToPolygons.prototype._interpretPath = function (cmd) {
 // final point     : [x3, y3]
 // http://antigrain.com/research/adaptive_bezier/
 SvgPathToPolygons.prototype._sampleCubicBezier = function (x0, y0, x1, y1, x2, y2, x3, y3) {
+  // ignore degenerate curves
+  if (x0 === x1 && x0 === x2 && x0 === x3 && y0 === y1 && y0 === y2 && y0 === y3) {
+    console.warn("Degenerate curves!");
+    return;
+  }
   // Calculate all the mid-points of the line segments
   const x01   = (x0 + x1) / 2,
         y01   = (y0 + y1) / 2,

@@ -46,7 +46,12 @@ const expectations = [
 		closed: [false],
 		decimals:1
 	},
-
+	{
+		m:'degenerate curve',
+		d:'M0,0 c0,0 0,0 0,0',
+		o:[[[0,0],[0,0]]],
+		closed: [false]
+	},
 ];
 
 expectations.forEach(ex => {
