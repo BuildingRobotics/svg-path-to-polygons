@@ -129,11 +129,12 @@ SvgPathToPolygons.prototype._sampleCubicBezier = function (x0, y0, x1, y1, x2, y
   if (((d1+d2)*(d1+d2)) < (this.tolerance2 * (dx*dx + dy*dy))) {
     this._add(x0123,y0123);
     return ;
-  } else { // Continue subdivision
-    this._sampleCubicBezier(x0, y0, x01, y01, x012, y012, x0123, y0123);
-    this._sampleCubicBezier(x0123, y0123, x123, y123, x23, y23, x3, y3);
   }
+
+  this._sampleCubicBezier(x0, y0, x01, y01, x012, y012, x0123, y0123);
+  return this._sampleCubicBezier(x0123, y0123, x123, y123, x23, y23, x3, y3);
 };
+
 
 SvgPathToPolygons.prototype._add = function (x,y) {
   const decimals = this.opts.decimals;
